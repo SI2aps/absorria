@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, redirect, render_template, request, url_for
 from wtforms import Form, FormField
 
 app = Flask(__name__)
@@ -13,7 +13,7 @@ def absorventes():
 
 @app.route('/calculadora')
 def calculadora():
-    return render_template('calculadora.html')
+    return render_template('calculadora.html', resultado_descartavel='conversao_carbono_descartavel', resultado_coletor='conversao_carbono_coletor')
 
 total_absorvente = 0
 conversao_carbono_coletor = 0
@@ -22,11 +22,10 @@ conversao_carbono_descartavel = 0
 @app.route('/', methods=['GET', 'POST'])
 def form_calculadora():
     if request.method == 'POST':
-        # Print the form data to the console
         qtdade = int(Form.qtdade_absorvente.data)
         dias = int(FormField.dias_absorvente.data)
         total_absorvente = qtdade * dias
         conversao_carbono_descartavel = (total_absorvente * 20.19) / 195
         conversao_carbono_coletor = total_absorvente * 1.77
 
-    return render_template('calculadora.html')
+    return render_template('resultado.html')

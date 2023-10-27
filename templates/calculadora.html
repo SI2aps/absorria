@@ -2,6 +2,8 @@
 
 {% block css %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/calculadora.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 {% endblock %}
 
 {% block nav %}
@@ -38,6 +40,20 @@
   </label>
   <input type="text" class="form-control" id="dias_absorvente" name="dias_absorvente" />  <!-- Flask: request.form['number_of_shares'] -->
   <br>
-  <button type="submit" class="btn btn-primary">Calcular!</button>
+  <button data-modal-target="#modal" type="submit" class="btn btn-primary">Calcular!</button>
+
+  <div class="modal modal-dialog modal-dialog-centered" id="modal">
+    <div class="modal-header">
+      <div class="title">Resultado do cálculo</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>Sua pegada de carbono é de: {{ resultado_descartavel }}</p>
+      <p>E caso trocasse para coletor menstrual, sua pegada seria de: {{ resultado_coletor }}</p>
+      <button class="saiba_mais_form" role="button">Saiba mais</button>
+    </div>  
+  </div>
+  
+  
 </form>
 {% endblock %}
