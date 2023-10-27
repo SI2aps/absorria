@@ -1,0 +1,104 @@
+.banner-image img{
+    width: 100%;
+    height: 68%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.img-fluid{
+    height: 53% !important;
+}
+
+.main-index-text{
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    color: #52B2B2;
+    font-size: 1.15em;
+    margin-top: 25px;
+    padding-right: 0px !important;
+}
+
+.main-index-text, .col-imgs{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.col-imgs{
+    gap: 50.5px;
+}
+
+.col-imgs img{
+    width: 196.5px;
+    height: 193.1px;
+}
+
+.col-imgs img{
+    margin-top: 25px;
+    margin: 23px;
+}
+
+@media screen and (min-width: 1890px) and (max-width: 2560px){
+    .main-index-text{
+        font-size: 1.9em;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .col-md-8{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .col-imgs{
+        width: 55% !important;
+        padding-right: 0px !important;
+    }
+}
+/*
+@media screen and (min-width: 990px) and (max-width: 1429px){
+    .col-imgs img{
+
+    }
+}
+*/
+
+@media (min-width: 768px){
+    .col-md-8{
+        width: 44.67% !important;    
+    }
+}
+
+@media screen and (max-width: 767px){
+    .main-index-text{
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px){
+    .main-index-text{
+        font-size: 1em;
+    }
+}
+
+.button-calcule {
+    background: #F3A2A7;
+    border-radius: 999px;
+    box-shadow: #F3A2A7 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+    margin-left: 18px;
+    margin-top: 8px;
+  }

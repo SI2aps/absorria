@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/calculadora.css') }}">
+{% endblock %}
+
+{% block nav %}
+<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+      <a class="nav-link w-nav-link" aria-current="page" href="{{ url_for('index') }}">HOME</a>
+    </li>
+<!--DROPDOWN-->
+  <div class="dropdown-center">
+    <li class="nav-item dropdown">
+      <a class="nav-link active dropdown-title" href="#" role="button" data-bs-toggle="dropdown" data-display="static" aria-expanded="false">ABSORVENTE</a>
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start dropdown-content">
+          <li><a class="dropdown-item dropdown-1" href="{{ url_for('absorventes') }}">Impacto dos Absorventes</a></li>
+          <li><a class="dropdown-item dropdown-2" href="{{ url_for('calculadora') }}">Calculadora</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item dropdown-3" href="#">Something else here</a></li>
+        </ul>  
+    </li>
+  </div>  
+  </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+<form method="post">
+  <label for="qtdade_absorvente">Digite a quantidade aproximada de absorventes descartáveis tradicionais que você utiliza em um dia de menstruação:
+    <em>(required)</em>
+  </label>
+  <input type="text" class="form-control" id="qtdade_absorvente" name="qtdade_absorvente" />  <!-- Flask: request.form['stock_symbol'] -->
+  <br>
+  <label for="dias_absorvente">Digite a quantidade de dias do seu período mentrual:
+    <em>(required)</em>
+  </label>
+  <input type="text" class="form-control" id="dias_absorvente" name="dias_absorvente" />  <!-- Flask: request.form['number_of_shares'] -->
+  <br>
+  <button type="submit" class="btn btn-primary">Calcular!</button>
+</form>
+{% endblock %}
