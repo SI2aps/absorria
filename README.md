@@ -1,2 +1,2 @@
 # absorria
-#absorria é um site informativo
+Calculadora individual que mostra a emissão de carbono resultante do consumo de absorventes descártaveis.
