@@ -8,7 +8,7 @@ O objetivo do Absorria é informar os usuários sobre os impactos ambientais de 
 ## Funcionalidades
 - Cálculo da pegada de carbono anual com base no uso de absorventes descartáveis.
 - Comparação com a pegada de carbono anual ao usar coletores menstruais.
-- Interface intuitiva com informações claras e gráficos comparativos.
+- Interface intuitiva com informações claras e comparativos.
 
 ## Requisitos
 Certifique-se de ter instalado os seguintes itens antes de executar o projeto:
